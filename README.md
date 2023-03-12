@@ -99,4 +99,18 @@
 
 ---
 
+## Version 1.001
+
+- Add functionalities: `StaffController.java`
+  - isConnect()
+  - isUnique(id:string)
+  - getStaff(id:string)
+  - createStaff(staff:Staff)
+  - updateStaff(id:string, staff:Staff)
+  - deleteStaff(id:string)
+
+- Add sample of adding actionListener in UI
+
+---
+
 [TOP](#itc-5201-java-assignment04)
