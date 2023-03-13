@@ -120,4 +120,16 @@
 
 ---
 
+## Version 1.012
+
+- `StaffController.java` debug sql string.
+- `Staff.java` add validation functionalities for each setter or getter.
+- `StaffUI.java`:
+  - add email test field
+  - add view, insert, update, remove, delete action listener
+  - add supportive function
+  - add id validation functionality
+
+---
+
 [TOP](#itc-5201-java-assignment04)

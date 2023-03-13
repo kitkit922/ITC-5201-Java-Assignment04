@@ -13,16 +13,52 @@ public class Staff {
     private String telephone;
     private String email;
 
-    private final int ID_SIZE = 9;
-    private final int LAST_NAME_SIZE = 15;
-    private final int FIRST_NAME_SIZE = 15;
-    private final int MI_SIZE = 1;
-    private final int ADDRESS_SIZE = 20;
-    private final int CITY_SIZE = 20;
-    private final int STATE_SIZE = 2;
-    private final int TELEPHONE_SIZE = 10;
-    private final int EMAIL_SIZE = 40;
+    private static final int ID_SIZE = 9;
+    private static final int LAST_NAME_SIZE = 15;
+    private static final int FIRST_NAME_SIZE = 15;
+    private static final int MI_SIZE = 1;
+    private static final int ADDRESS_SIZE = 20;
+    private static final int CITY_SIZE = 20;
+    private static final int STATE_SIZE = 2;
+    private static final int TELEPHONE_SIZE = 10;
+    private static final int EMAIL_SIZE = 40;
     // endregion
+
+    public static int getIdSize() {
+        return ID_SIZE;
+    }
+
+    public static int getLastNameSize() {
+        return LAST_NAME_SIZE;
+    }
+
+    public static int getFirstNameSize() {
+        return FIRST_NAME_SIZE;
+    }
+
+    public static int getMiSize() {
+        return MI_SIZE;
+    }
+
+    public static int getAddressSize() {
+        return ADDRESS_SIZE;
+    }
+
+    public static int getCitySize() {
+        return CITY_SIZE;
+    }
+
+    public static int getStateSize() {
+        return STATE_SIZE;
+    }
+
+    public static int getTelephoneSize() {
+        return TELEPHONE_SIZE;
+    }
+
+    public static int getEmailSize() {
+        return EMAIL_SIZE;
+    }
 
     // Constructor
     public Staff() {
@@ -40,7 +76,7 @@ public class Staff {
     // #region Getters and Setters
 
     public String getID() {
-        return this.ID;
+        return this.ID == null ? "" : this.ID.trim();
     }
 
     public void setID(String id) {
@@ -52,11 +88,13 @@ public class Staff {
     }
 
     public String getLastName() {
-        return lastName;
+        return this.lastName == null ? "" : this.lastName.trim();
     }
 
     public void setLastName(String lastName) {
-        if (lastName.length() > LAST_NAME_SIZE) {
+        if (lastName == null) {
+            this.lastName = "";
+        } else if (lastName.length() > LAST_NAME_SIZE) {
             this.lastName = lastName.substring(0, LAST_NAME_SIZE);
         } else {
             this.lastName = lastName;
@@ -64,11 +102,13 @@ public class Staff {
     }
 
     public String getFirstName() {
-        return firstName;
+        return this.firstName == null ? "" : this.firstName.trim();
     }
 
     public void setFirstName(String firstName) {
-        if (firstName.length() > FIRST_NAME_SIZE) {
+        if (firstName == null) {
+            this.firstName = "";
+        } else if (firstName.length() > FIRST_NAME_SIZE) {
             this.firstName = firstName.substring(0, FIRST_NAME_SIZE);
         } else {
             this.firstName = firstName;
@@ -76,11 +116,13 @@ public class Staff {
     }
 
     public String getMi() {
-        return mi;
+        return this.mi == null ? "" : this.mi.trim();
     }
 
     public void setMi(String mi) {
-        if (mi.length() > MI_SIZE) {
+        if (mi == null) {
+            this.mi = "";
+        } else if (mi.length() > MI_SIZE) {
             this.mi = mi.substring(0, MI_SIZE);
         } else {
             this.mi = mi;
@@ -88,11 +130,13 @@ public class Staff {
     }
 
     public String getAddress() {
-        return address;
+        return this.address == null ? "" : this.address.trim();
     }
 
     public void setAddress(String address) {
-        if (address.length() > ADDRESS_SIZE) {
+        if (address == null) {
+            this.address = "";
+        } else if (address.length() > ADDRESS_SIZE) {
             this.address = address.substring(0, ADDRESS_SIZE);
         } else {
             this.address = address;
@@ -100,11 +144,13 @@ public class Staff {
     }
 
     public String getCity() {
-        return city;
+        return this.city == null ? "" : this.city.trim();
     }
 
     public void setCity(String city) {
-        if (city.length() > CITY_SIZE) {
+        if (city == null) {
+            this.city = "";
+        } else if (city.length() > CITY_SIZE) {
             this.city = city.substring(0, CITY_SIZE);
         } else {
             this.city = city;
@@ -112,11 +158,13 @@ public class Staff {
     }
 
     public String getState() {
-        return state;
+        return this.state == null ? "" : this.state.trim();
     }
 
     public void setState(String state) {
-        if (state.length() > STATE_SIZE) {
+        if (state == null) {
+            this.state = "";
+        } else if (state.length() > STATE_SIZE) {
             this.state = state.substring(0, STATE_SIZE);
         } else {
             this.state = state;
@@ -124,11 +172,13 @@ public class Staff {
     }
 
     public String getTelephone() {
-        return telephone;
+        return this.telephone == null ? "" : this.telephone.trim();
     }
 
     public void setTelephone(String telephone) {
-        if (telephone.length() > TELEPHONE_SIZE) {
+        if (telephone == null) {
+            this.telephone = "";
+        } else if (telephone.length() > TELEPHONE_SIZE) {
             this.telephone = telephone.substring(0, TELEPHONE_SIZE);
         } else {
             this.telephone = telephone;
@@ -136,11 +186,13 @@ public class Staff {
     }
 
     public String getEmail() {
-        return email;
+        return this.email == null ? "" : this.email.trim();
     }
 
     public void setEmail(String email) {
-        if (email.length() > EMAIL_SIZE) {
+        if (email == null) {
+            this.email = "";
+        } else if (email.length() > EMAIL_SIZE) {
             this.email = email.substring(0, EMAIL_SIZE);
         } else {
             this.email = email;

@@ -11,13 +11,13 @@ public class StaffController {
     private final String HOST_NAME = "calvin.humber.ca";
     private final String PORT = "1521";
     private final String SID = "grok";
-    private final String USER_NAME = "";
+    private final String USER_NAME = "n01555914";
     private final String PWD = "oracle";
 
-    private final String QUERY_SQL = "SELECT * FROM java_staff WHERE id = %s";
-    private final String UNIQUE_SQL = "SELECT COUNT(*) AS COUNT FROM JAVA_STAFF WHERE ID = %s";
+    private final String QUERY_SQL = "SELECT * FROM java_staff WHERE id = '%s'";
+    private final String UNIQUE_SQL = "SELECT COUNT(*) AS COUNT FROM JAVA_STAFF WHERE ID = '%s'";
     private final String INSERT_SQL = "INSERT INTO java_staff VALUES('%s','%s','%s',upper('%s'),'%s','%s','%s','%s','%s')";
-    private final String UPDATE_SQL = "UPDATE java_staff SET firstname='%s', lastname = '%s', mi = upper('%s'), address = '%s', city = '%s', state = '%s', telephone = '%s', email = '%s'WHERE id = %s";
+    private final String UPDATE_SQL = "UPDATE java_staff SET firstname='%s', lastname = '%s', mi = upper('%s'), address = '%s', city = '%s', state = '%s', telephone = '%s', email = '%s'WHERE id = '%s'";
     private final String DELETE_SQL = "DELETE FROM java_staff WHERE id = '%s'";
 
     private String connectionString = "";
