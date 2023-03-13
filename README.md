@@ -102,6 +102,7 @@
 ## Version 1.001
 
 - Add functionalities: `StaffController.java`
+
   - isConnect()
   - isUnique(id:string)
   - getStaff(id:string)
@@ -110,6 +111,12 @@
   - deleteStaff(id:string)
 
 - Add sample of adding actionListener in UI
+
+---
+
+## Version 1.011
+
+- GUI design: `StaffUI.java`
 
 ---
 
