@@ -6,17 +6,24 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GUI",
+            "request": "launch",
+            "mainClass": "view.GUI",
+            "projectName": "ITC-5201-Java-Assignment04_68ca2cb8"
+        },
+        {
+            "type": "java",
+            "name": "StaffDemo",
+            "request": "launch",
+            "mainClass": "StaffDemo",
+            "projectName": "ITC-5201-Java-Assignment04_68ca2cb8"
+        },
+        {
+            "type": "java",
             "name": "StaffDemo",
             "request": "launch",
             "mainClass": "StaffDemo",
             "projectName": "assignment04_2adb4b7c"
-        },
-        // {
-        //     "type": "java",
-        //     "name": "Test",
-        //     "request": "launch",
-        //     "mainClass": "_test.Test",
-        //     "projectName": "assignment04_2adb4b7c"
-        // }
+        }
     ]
 }
