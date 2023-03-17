@@ -2,32 +2,45 @@ package controller;
 
 import model.*;
 
-/**
- * ID: n01555914
- * Name: Wenhao Fang
+/*************************************************************************************************
+ * Course_Name – Assignment 04
  * 
- * This is a class represents the response sent from controller to UI.
+ * I declare that this assignment is my own work in accordance with Humber
+ * Academic Policy. 
+ * 
+ * No part of this assignment has been copied manually or electronically from
+ * any other source (including web sites) or distributed to other students/social media.
+ * 
+ * Name: Wenhao Fand 
+ * Student ID: N01555914
+ * Date: 2023/03/17
+ * 
+ *************************************************************************************************/
+
+/**
+ * This is a class that represents a response passing data from controller to
+ * UI.
  * 
  * @author Wenhao Fang
  */
 public class Response {
 
     // region Private members
-    private Status status;
-    private String message;
-    private Staff staff;
+    private Status status;// The status of the controller's action.
+    private String message;// The message to be passed from controller to UI.
+    private Staff staff;// A Staff object to be passed.
 
     // endregion
 
-    // region Constructors
-
+    // region Constuctors
     /**
      * Default constuctor.
+     * Initializes values.
      */
     public Response() {
         this.status = Status.ERROR;// Default status.
         this.message = "";
-        this.staff = null;
+        this.staff = null;// By default, the Staff object always be null.
     }
 
     /**
@@ -47,26 +60,56 @@ public class Response {
 
     // region Setters and Getters
 
+    /**
+     * Gets response's status
+     * 
+     * @return A status object.
+     */
     public Status getStatus() {
         return status;
     }
 
+    /**
+     * Sets response's status
+     * 
+     * @param status A status object.
+     */
     public void setStatus(Status status) {
         this.status = status;
     }
 
+    /**
+     * Gets response message.
+     * 
+     * @return A string message.
+     */
     public String getMessage() {
         return message;
     }
 
+    /**
+     * Sets a response's message.
+     * 
+     * @param message A string message.
+     */
     public void setMessage(String message) {
         this.message = message;
     }
 
+    /**
+     * Gets a response's Staff.
+     * 
+     * @return The staff object of this response.
+     */
     public Staff getStaff() {
         return staff;
     }
 
+    /**
+     * Sets a response's staff.
+     * 
+     * @param staff A staff object.
+     */
     public void setStaff(Staff staff) {
         this.staff = staff;
     }

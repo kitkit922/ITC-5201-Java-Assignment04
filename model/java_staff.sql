@@ -1,5 +1,23 @@
--- Course: java
+-- Course: DB Java
 -- Assignment: 04
+-- Creator: Wenhao Fang
+-- Student ID: n01555914
+
+/*************************************************************************************************
+ * Course_Name – Assignment 04
+ * 
+ * I declare that this assignment is my own work in accordance with Humber
+ * Academic Policy. 
+ * 
+ * No part of this assignment has been copied manually or electronically from
+ * any other source (including web sites) or distributed to other students/social media.
+ * 
+ * Name: Wenhao Fand 
+ * Student ID: N01555914
+ * Date: 2023/03/17
+ * 
+ *************************************************************************************************/
+
 
 DROP TABLE java_staff;
 
@@ -42,34 +60,3 @@ INSERT INTO java_staff VALUES(
 
 SELECT *
 FROM java_staff;
-
--- UPDATE java_staff
--- SET
---   firstname = 'FIRST_NAM03'
--- , lastname = 'LAST_NAME03'
--- , mi = upper(
---     'm'
---   )
--- , address = 'address03'
--- , city = 'city03'
--- , state = 'ON'
--- , telephone = '8442507537'
--- , email = 'email@def.com'
--- WHERE
---   id = 5;
-
-SELECT *
-FROM java_staff
-WHERE id = '1';
-
-SELECT COUNT(*) AS count
-FROM java_staff
-WHERE id = 1;
-
-DELETE FROM java_staff
-WHERE
-  id = '3';
-
-DELETE FROM java_staff
-WHERE
-  id = '5';

@@ -51,7 +51,6 @@
             +getStaff(id:string):Staff
             +createStaff(staff:Staff):boolean
             +updateStaff(id:string, staff:Staff):boolean
-            +deleteStaff(id:string):boolean
         }
 
   ```
@@ -76,7 +75,7 @@
 - Package `view`:
 
   - Design
-    ![sample](./ui.png)
+    ![sample](./doc/ui.png)
   - Functionalities
     - validat input
     - display connection status
