@@ -11,7 +11,7 @@ public class StaffController {
     private final String HOST_NAME = "calvin.humber.ca";
     private final String PORT = "1521";
     private final String SID = "grok";
-    private final String USER_NAME = "";
+    private final String USER_NAME = "";// use individual ID
     private final String PWD = "oracle";
 
     private final String QUERY_SQL = "SELECT * FROM java_staff WHERE id = '%s'";

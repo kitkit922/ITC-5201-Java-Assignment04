@@ -25,7 +25,7 @@ public class StaffUI extends JFrame {
     // region Private members
 
     // size
-    private final int WIDTH = 500;
+    private final int WIDTH = 520;
     private final int HEIGHT = 330;
 
     // 3 main panels
@@ -48,7 +48,7 @@ public class StaffUI extends JFrame {
     private JButton btnView;
     private JButton btnInsert;
     private JButton btnUpdate;
-    private JButton btnDelete;
+    private JButton btnClear;
 
     // label for status
     private JLabel statusLabel;
@@ -219,17 +219,17 @@ public class StaffUI extends JFrame {
         btnView = new JButton("View");
         btnInsert = new JButton("Insert");
         btnUpdate = new JButton("Update");
-        btnDelete = new JButton("Delete");
+        btnClear = new JButton("Clear");
 
         btnView.addActionListener(new btnViewActionListener());
         btnInsert.addActionListener(new btnInsertActionListener());
         btnUpdate.addActionListener(new btnUpdateActionListener());
-        btnDelete.addActionListener(new btnDeleteActionListener());
+        btnClear.addActionListener(new btnClearActionListener());
 
         btnPanel.add(btnView);
         btnPanel.add(btnInsert);
         btnPanel.add(btnUpdate);
-        btnPanel.add(btnDelete);
+        btnPanel.add(btnClear);
 
         return btnPanel;
     }
@@ -384,36 +384,11 @@ public class StaffUI extends JFrame {
         }
     }
 
-    private class btnDeleteActionListener implements ActionListener {
-
+    private class btnClearActionListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-
-            if (idTextField.getText().length() != 0) {
-
-                Response response = controller.deleteStaff(idTextField.getText());
-
-                // show message dialog depends on the status
-                if (response.getStatus() == Status.SUCCESS) {
-                    clearTextField();
-                    JOptionPane.showMessageDialog(btnView, response.getMessage(),
-                            Status.SUCCESS.toString(),
-                            JOptionPane.INFORMATION_MESSAGE);
-                } else if (response.getStatus() == Status.WARNING) {
-                    JOptionPane.showMessageDialog(btnView, response.getMessage(),
-                            Status.WARNING.toString(),
-                            JOptionPane.WARNING_MESSAGE);
-                } else {
-                    JOptionPane.showMessageDialog(btnView, response.getMessage(),
-                            Status.ERROR.toString(),
-                            JOptionPane.ERROR_MESSAGE);
-                }
-            } else {
-                JOptionPane.showMessageDialog(btnPanel, "ID cannot be empty", "Warning",
-                        JOptionPane.INFORMATION_MESSAGE);
-            }
+            clearTextField();
         }
-
     }
 
     private class idInputListener implements DocumentListener {
@@ -468,7 +443,7 @@ public class StaffUI extends JFrame {
         staff.setTelephone(telephoneTextField.getText());
         staff.setEmail(emailTextField.getText());
 
-        System.out.println(staff);
+        // System.out.println(staff);
 
         return staff;
     }
@@ -480,7 +455,7 @@ public class StaffUI extends JFrame {
         btnView.setEnabled(false);
         btnInsert.setEnabled(false);
         btnUpdate.setEnabled(false);
-        btnDelete.setEnabled(false);
+        btnClear.setEnabled(false);
     }
 
     private void clearTextField() {

@@ -126,9 +126,11 @@
 - `Staff.java` add validation functionalities for each setter or getter.
 - `StaffUI.java`:
   - add email test field
-  - add view, insert, update, remove, delete action listener
+  - add view, insert, update, remove, clear action listener
   - add supportive function
   - add id validation functionality
+- `doc/`
+  - add ppt
 
 ---
 
